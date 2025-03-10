@@ -20,45 +20,44 @@ To use this dashboard, follow these steps:
 ### Installation 🛠
 
 1. Clone the repository to your local machine:
-   
-   ```bash
-   git clone https://github.com/rahmakhaledsalama/HR-Dashboard.git
-Open the Power BI Desktop application.
-Load the HR Dashboard Power BI file (.pbix) from the cloned repository.
-Data Preparation 🗂
-Using Power Query
+    
+    ```bash
+    git clone https://github.com/rahmakhaledsalama/HR-Dashboard.git
+    ```
+2. Open the Power BI Desktop application.
+3. Load the HR Dashboard Power BI file (.pbix) from the cloned repository.
+
+## Data Preparation 🗂
+
+### Using Power Query
+
 Power Query is used to import, clean, and transform your data before it is loaded into the data model. The following steps outline the basic process:
 
-Import Data: Bring in data from various sources such as Excel, SQL Server, or other databases.
-Transform Data: Apply transformations like filtering rows, splitting columns, and changing data types.
-Load Data: Load the transformed data into Power BI for further analysis and visualization.
-Writing Measures and Calculated Columns
+1. **Import Data**: Bring in data from various sources such as Excel, SQL Server, or other databases.
+2. **Transform Data**: Apply transformations like filtering rows, splitting columns, and changing data types.
+3. **Load Data**: Load the transformed data into Power BI for further analysis and visualization.
+
+### Writing Measures and Calculated Columns
+
 Measures and calculated columns are created using DAX (Data Analysis Expressions). Below are examples of how each is used in this dashboard:
 
-Measures
+**Measures**
+
 Measures are used to perform calculations on your data. They are dynamic and recalculated based on the context of the report.
 
 Example:
 
-DAX
+```DAX
 Total Employees = COUNTROWS(Employees)
-Calculated Columns
+
+**Calculated Columns**
+
 Calculated columns are added to your data model and used for more static calculations.
 
 Example:
 
-DAX
+```DAX
 Full Name = Employees[First Name] & " " & Employees[Last Name]
-Usage 📈
-Once the data is prepared and the measures and calculated columns are created, you can start building your visualizations. Here are some common visuals used in the HR Dashboard:
 
-Bar Charts: To show comparisons between different categories.
-Line Charts: To display trends over time.
-Pie Charts: To show proportions of a whole.
-Tables and Matrices: To display detailed data in a structured format.
-Contributions 🤝
-Contributions are welcome! If you have any suggestions or improvements, feel free to create a pull request or open an issue.
-
-License 📜
+### License 📜
 This project is licensed under the MIT License. See the LICENSE file for details.
-
